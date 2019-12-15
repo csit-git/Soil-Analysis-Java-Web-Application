@@ -1,0 +1,648 @@
+<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<%      
+	
+	session=request.getSession(false);
+    String username=(String)session.getAttribute("id");
+	if(username==null)
+	{
+	 response.sendRedirect("Login.jsp");
+	} 
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <TITLE>Farmers Buddy</TITLE>
+           <LINK href="./Sample_files/cssWeb.css" rel="StyleSheet" type="text/css">
+     <META name="revisit-after" content="3 days">
+    <META content="index, follow" name="robots">
+    <SCRIPT type="text/javascript">
+	     
+        function NavigateToHomePage(obj)
+        {
+            if(obj.selectedIndex > 0)//first entry is the plz choose
+            {
+                window.location.href = 'http://www.formlogix.com/' + obj.options[obj.selectedIndex].value;
+            }
+        }
+    </SCRIPT>
+ 
+    <!-- <BASE href="http://www.formlogix.com/"> --><BASE href=".">
+    
+<META name="description" content="FormLogix.com provides a great form templates gallery, browse our form gallery and easily clone it for your own needs. ">
+<META name="keywords" content="free web form,template,web form,form template,form gallery,contact us form,feedback form,invitation form">
+
+<SCRIPT type="text/javascript" src="./Sample_files/Common.js"></SCRIPT>
+<SCRIPT type="text/javascript">
+var NEW_LINE_TAG = '_formlogix_newline';
+var TEMPLATES_GALLERY_TEMPLATE_LOADING = 'Loading...';
+function DoSearch()
+{
+    ShowLoadingMsg(TEMPLATES_GALLERY_TEMPLATE_LOADING);
+    var searchTerm = document.getElementById('searchTerm').value;
+    CallServer('search' + '_formlogix_command'+searchTerm,'search');
+}
+
+// set the description of the template on the page
+function SetDescription(desc)
+{
+    // remove ' chars
+    var elem = document.getElementById('dvDescription');
+    elem.innerHTML = desc;
+    elem = null;
+}
+
+// show template html
+function ShowTemplateHTML(htmlData)
+{
+    var elem = document.getElementById('htmlContent');
+    elem.style.visibility = 'hidden';
+    elem.innerHTML = htmlData;
+    FixElements();
+    elem.style.visibility = 'visible';
+    elem = null;
+}
+
+// set list html
+function SetTemplateListHTML(listHTML)
+{
+    var elem = document.getElementById('dvTemplateList');
+    elem.innerHTML = listHTML;
+    elem = null;
+}
+function LoadTemplateHTML(id)
+{
+    ShowLoadingMsg(TEMPLATES_GALLERY_TEMPLATE_LOADING);
+    CallServer('id' + '_formlogix_command'+id,'showHTML');
+}
+
+function ShowCalendar(objId)
+{
+
+}
+
+
+function SetMousePointer()
+{
+
+}
+// fixes the labels for view: changes the enter constants to enters
+function FixLabelEnters()
+{
+ var dvHTML = document.getElementById('dvHTML');
+ var textAreas = document.body.getElementsByTagName('textarea');
+ var len = textAreas.length;
+
+    for(var i =0;i<len;i++)
+    {
+        var cuuElemInLoop = textAreas[i];
+        if (cuuElemInLoop!=null)
+        {
+            var type = cuuElemInLoop.getAttribute('ctlType');
+            if (type == 'Label')
+            {
+                var val = cuuElemInLoop.innerHTML; 
+                val = val.replace( new RegExp( NEW_LINE_TAG, "g" ), '\r\n' ); 
+//                while(val.indexOf(NEW_LINE_TAG) != -1)
+//                {                
+//                    val = val.replace(NEW_LINE_TAG,"\r\n");
+//                }  
+                cuuElemInLoop.innerHTML = val;
+                cuuElemInLoop.value = val;
+                cuuElemInLoop.setAttribute('value',val);                
+            }
+            
+        }
+    }
+}
+
+//recive server data and handled the apprpiate task
+function ReceiveServerData(rValue, context)
+{
+    HideLoadingMsg();
+    if (context == 'showHTML')
+    {
+        ShowTemplateHTML(rValue);
+    }
+    else if (context == 'search')
+    {
+        SetTemplateListHTML(rValue);
+    }
+
+    
+    return false;
+}
+
+
+///modifiaction html on runtime env.
+function FixElements()
+{
+   FixLabelEnters();
+   FixLabels();
+   FixMoveHelper();
+}
+
+// stub function for the template forms
+//valiudate form
+function ValidateForm()
+{
+    return false;
+}
+
+function CatchEnter() {
+}
+
+function insertRow(obj)
+{
+}
+function removeRow(obj)
+{
+}
+</SCRIPT>
+<SCRIPT type="text/javascript">
+function noenter() {
+  return !(window.event && window.event.keyCode == 13); }
+</SCRIPT>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 13px
+}
+-->
+</style>
+<style href>a {text-decoration: none} </style>
+</HEAD><BODY class="MainBGColor2" onload="startTime()">
+    <DIV>
+        <TABLE width="1034" cellpadding="0" cellspacing="0" class="MasterGeneralTable">
+      <TBODY><TR valign="top">
+                <TD width="1027">
+        <TD width="10" class="SideShadowRight">            </TR>
+            <!-- page start -->
+             <TR valign="top">
+              <TD align="center" class="MainTd"><table border="0" cellspacing="0" cellpadding="0" dir="ltr">
+                <!-- logo -->
+                <tbody>
+                  <tr class="LogoRow">
+                    <td colspan="3" align="left" class="LogoRow"><table cellspacing="0" cellpadding="0" width="933">
+                        <tbody>
+                          <tr>
+                            <td colspan="8" align="left"><img src="Sample_files/images/label3_01.gif" alt="logo1" width="933" height="120" /></td>
+                          </tr>
+                          <tr>
+                            <td width="281" align="left"><img src="Sample_files/images/label3_02.gif" alt="logo2" width="281" height="43" /></td>
+                            <td width="102" align="left"><a href="Sample.jsp"><img src="Sample_files/images/label3_03.gif" alt="home" width="102" height="43" border="0" /></a></td>
+                            <td width="108" align="left"><img src="Sample_files/images/label3_04.gif" alt="agrib" width="108" height="43" /></td>
+                            <td width="104" align="left"><img src="Sample_files/images/label3_05.gif" alt="majorcrops" width="104" height="43" /></td>
+                            <td width="107" align="left"><img src="Sample_files/images/label3_06.gif" alt="cropmarket" width="107" height="43" /></td>
+                            <td width="105" align="left"><a href="About Us.htm"><img src="Sample_files/images/label3_07.gif" alt="aboutus" width="105" height="43" border="0" /></a></td>
+                            <td width="126" align="left"><img src="Sample_files/images/label3_08.gif" alt="contactus" width="126" height="43" /></td>
+                            <td width="4" align="left">&nbsp;</td>
+                          </tr>
+                        </tbody>
+                    </table></td>
+                  </tr>
+                  <!-- menu -->
+                  <tr class="MenuRow">
+                    <td width="933" align="left" id="tdMainMenu1" ><iframe height="50" src ="http://www.nmce.com/top_test.jsp" width="933"></iframe></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" align="right" ><select class="GrayWriting" id="lstLang" name="lstLang" onchange="NavigateToHomePage(this);">
+                        <option value="--">Language</option>
+                        <option value="CreateWebForms.aspx?LangId=1">English</option>
+                        <option value="lang/esp/CreateWebForms.aspx?LangId=3">espa&ntilde;ol</option>
+                        <option value="lang/chn/CreateWebForms.aspx?LangId=4">中文</option>
+                        <option value="lang/fra/CreateWebForms.aspx?LangId=5">fran&ccedil;ais</option>
+                        <option value="lang/heb/CreateWebForms.aspx?LangId=2">עברית</option>
+                        <option value="lang/arb/CreateWebForms.aspx?LangId=6">العربية</option>
+                        <option value="lang/dut/CreateWebForms.aspx?LangId=7">Dutch</option>
+                        <option value="lang/rus/CreateWebForms.aspx?LangId=8">Русский</option>
+                    </select></td>
+                    
+                  </tr>
+                  <!-- gray line under menu -->
+                  <tr>
+                    <td colspan="3" class="MenuUnderline"></td>
+                  </tr>
+                  <!-- white space after menu -->
+                  <tr bgcolor="WHITE">
+                    <td colspan="3" class="AfterMenuWhiteSpace"></td>
+                  </tr>
+                  <!-- main content -->
+                  <tr bgcolor="WHITE">
+                    <td colspan="3" valign="top"><form name="aspnetForm" method="post" action="./Sample_files/Sample.htm" id="aspnetForm">
+                        <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+              </script>
+                        <script src="./Sample_files/WebResource.axd" type="text/javascript"></script>
+                        <script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false)} ;//]]>
+              </script>
+                        <script type="text/javascript">
+    
+    var isLoadingEffect = false;
+    var progressBlockCount = 8;
+    var currentBlock = 0;
+    var blockColor = '#c6d7ef';
+	function startTime()
+    {
+     var today=new Date();
+     var h=today.getHours();
+     var m=today.getMinutes();
+     var s=today.getSeconds();
+     // add a zero in front of numbers<10
+     m=checkTime(m);
+     s=checkTime(s);
+     document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+     t=setTimeout('startTime()',500);
+    }
+	
+	function changeBGC1(id)
+    {
+	 var a=id;
+     document.getElementById(a).style.backgroundColor ="#2f669c";
+	 document.getElementById(a).style.color ="white";
+	}
+	function changeBGC2(id)
+    {
+	 var a=id; 
+     document.getElementById(a).style.backgroundColor ="white";
+	 document.getElementById(a).style.color ="#2f669c";
+    }
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+
+
+    function ResetCurrentBlock()
+    {
+        currentBlock =0;
+    }
+    function ResetAllBlocks()
+    {
+     ResetCurrentBlock();
+     for(var i=0; i < progressBlockCount; i++)
+     {
+       document.getElementById('tdAnimation_' + i).style.backgroundColor = '#ffffff';
+     }
+    }
+    
+    
+    function AnimateProgress()
+    {
+        if( isLoadingEffect )
+        {
+               
+        if( currentBlock == progressBlockCount )
+        {
+            ResetAllBlocks();
+        }
+        else
+        {
+         document.getElementById('tdAnimation_' + currentBlock).style.backgroundColor = blockColor;
+         currentBlock++;
+        }
+        window.setTimeout("AnimateProgress();",200);
+        }
+        else
+        {
+            return;
+        }
+    }
+    function ShowTip(msg)
+    {
+       if(!isLoadingEffect)
+       {
+            document.getElementById('dvLoadMsg').innerHTML = msg;
+            document.getElementById('dvProgressAnimation').style.visibility ='visible';
+            window.setTimeout('HideTip()', 10000);
+       }
+    }
+    function HideTip()
+    {
+    if(!isLoadingEffect)
+       {
+            document.getElementById('dvProgressAnimation').style.visibility ='hidden';
+       }
+    }
+    
+    function ShowLoadingMsg(msg)
+    {
+       if(!isLoadingEffect)
+       {
+            document.getElementById('dvLoadMsg').innerHTML = msg;
+            isLoadingEffect = true;
+            window.status = 'start loading';
+            document.getElementById('dvProgressAnimation').style.visibility ='visible';
+           
+            ResetCurrentBlock();
+            AnimateProgress();
+            //auto hide msg after 120 sec!.
+            window.setTimeout("HideLoadingOnError();","90000");
+       }
+    }
+
+    function HideLoadingOnError()
+    {
+        if (isLoadingEffect )
+        {
+            HideLoadingMsg();
+            window.status = 'error loading';
+       }
+    }
+    function HideLoadingMsg()
+    {
+     
+         isLoadingEffect = false;
+         document.getElementById('dvProgressAnimation').style.visibility ='hidden';
+        ResetAllBlocks();
+        window.status = 'done loading';
+         
+    }
+
+              </script>
+                        <table width="100&percnt;" cellpadding="0" cellspacing="0" border="0" dir="ltr">
+                          <tbody>
+                            <tr>
+                              <td><div style="width:933px">
+                                  <table class="BasicTable" cellspacing="0" border="0" >
+                                    <tbody>
+                                      <tr>
+                                        <td colspan="3" class="HSpace15" style="width:850px;"><div id="txt"></div></td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2" class="WelcomeNoteSubTitle" align="left"><b>Farmers Buddy:Home  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b></td>
+                                        <td align="right" valign="top" class="WelcomeNoteSubTitle"><b>
+                                        
+                                        Welcome, <%=username%></b><a href="signout.jsp">Sign Out</a> </td>
+                                       
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2" class="BasicFont" align="left"><img src="Sample_files/home_icon.gif" alt="homeico" width="107" height="91" /></td>
+                                        <td width="700" align="left"  class="BasicFont"> Search: <br />
+                                            <input class="BasicFont" type="text" id="searchTerm" name="searchTerm" onkeypress="return noenter()" />
+                                          &nbsp;<a href="javascript:var i=DoSearch()"><img src="./Sample_files/SearchGoButton.gif" alt="Search" border="0" /></a> </td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="3" height="15" align="left" class="SmallFont">&nbsp;</td>
+                                      </tr>
+                                      <tr valign="top">
+                                        <td width="160" height="370" valign="top"><table width="100&percnt;" cellpadding="0" cellspacing="0" border="0">
+                                            <tbody>
+                                              <tr valign="top">
+                                                <td align="left" class="GrayWriting"><div id="dvTemplateList" style="height:300px; width:162px; overflow:auto;border:1px; border-color:#BBBBBB; border-style:solid;">
+                                                    <table>
+                                                      <tbody>
+                                                        <tr>
+                                                          <td width="152" bordercolor="0" id="link1" class="BlueBasicFont" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);" ><a id="slink1" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">My  Profile</a></td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  <table width="160">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link2" onmouseover="SetDescription(&#39;&nbsp;Enter your location and get the soil details, the type of crops grown and fertilizers to be used&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink2" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Soil Analysis</a></td>
+                                                        </tr>
+                                                      </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link4" onmouseover="SetDescription(&#39;&nbsp;Post query either to the genral public or directed to an officer&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink3" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Online Query</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link5" onmouseover="SetDescription(&#39;&nbsp;Go for the Agricultural Officer help through trainings&#39;);changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink5" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"  href="myprofile.html" class="BlueBasicFont">Trainings</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link6" onmouseover="SetDescription(&#39;&nbsp;Post your problems,get responses and have disscussions&#39;);changeBGC1(this.id); " onmouseout="changeBGC2(this.id);" ><a id="slink6" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Forum</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link7" onmouseover="SetDescription(&#39;&nbsp;Use FB email services.#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink7" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Mail</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link8" onmouseover="SetDescription(&#39;&nbsp;Contact form&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink8" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="chat12.jsp" class="BlueBasicFont">Chat</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link9" onmouseover="SetDescription(&#39;&nbsp;order dog walks&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink9" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Poll</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="154" class="BlueBasicFontNoAlign" id="link10" onmouseover="SetDescription(&#39;&nbsp;Event report form&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink10" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Tools And Solutions</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link13" onmouseover="SetDescription(&#39;&nbsp;please fill out this short form and let us know if you will be coming&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink13" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="weather.jsp" class="BlueBasicFont">Weather Forecast</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link14" onmouseover="SetDescription(&#39;&nbsp;Information request form&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink14" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Bulletin Board</a> </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr></tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr></tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr></tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr></tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr></tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr></tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div></td>
+                                              </tr>
+                                              <tr>
+                                                <td style="height:7px;" class="SmallFont" align="left">&nbsp;</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="GrayWriting" align="left"><u><b>Description:</b></u></td>
+                                              </tr>
+                                              <tr>
+                                                <td style="height:7px;" class="SmallFont" align="left">&nbsp;</td>
+                                              </tr>
+                                              <tr>
+                                                <td align="left" class="GrayWriting"><div id="dvDescription" style="height:46px; width:158px; overflow:auto;border:1px; border-color:#BBBBBB; border-style:solid;">&nbsp;A form for choosing a christmas gift</div></td>
+                                              </tr>
+                                            </tbody>
+                                        </table></td>
+                                        <td width="1">&nbsp;</td>
+                                        <td align="left" valign="top"><div id="htmlContent" style="position: relative; height: 370px; width: 670px; overflow-x: auto; overflow-y: auto; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-style: initial; border-color: initial; border-top-color: rgb(187, 187, 187); border-right-color: rgb(187, 187, 187); border-bottom-color: rgb(187, 187, 187); border-left-color: rgb(187, 187, 187); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; visibility: visible; ">
+                                          <div oncontextmenu="return false;" id="dvHTML" style="LEFT: 0px; WIDTH: 288px; TOP: 85px; HEIGHT: 360px; BACKGROUND-COLOR: white; TEXT-ALIGN: left" formtitle="form name" formrtl="false">
+                                            <div class="dragme" id="toolBarTextbox116591408159317989733240" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; Z-INDEX: 943; LEFT: 14px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 126px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 30px; HEIGHT: 20px" istoolbar="no" parentcellid="toolBarTextboxCell" origtop="219px" origleft="50px" containerelement="yes">
+                                              <input onkeypress="return CatchEnter()" id="TextBox__x116591408159322455434984" title="Textbox-Any" style="BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 10px; BORDER-LEFT: black 1px solid; WIDTH: 122px; CURSOR: default; BORDER-BOTTOM: black 1px solid; HEIGHT: 13px" tabindex="1" maxlength="255" datatype="Any" ctltype="TextBox" ismandatory="1" isdatacontainer="1" reportcaption="Full Name" />
+                                            </div>
+                                            <div class="dragme" id="toolBarTextbox11659140873122403533873" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; Z-INDEX: 626; LEFT: 14px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 126px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 75px; HEIGHT: 20px" istoolbar="no" parentcellid="toolBarTextboxCell" origtop="264px" origleft="50px" containerelement="yes">
+                                              <input onkeypress="return CatchEnter()" id="TextBox__x1165914087312979354901" title="Textbox-Any" style="BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 10px; BORDER-LEFT: black 1px solid; WIDTH: 122px; CURSOR: default; BORDER-BOTTOM: black 1px solid; HEIGHT: 13px" tabindex="2" maxlength="255" datatype="Any" ctltype="TextBox" ismandatory="1" isdatacontainer="1" reportcaption="User name" />
+                                            </div>
+                                            <div class="dragme" id="toolBarPassword116591408968723695525321" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; Z-INDEX: 625; LEFT: 14px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 126px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 120px; HEIGHT: 20px" istoolbar="no" parentcellid="toolBarPasswordCell" origtop="309px" origleft="50px" containerelement="yes">
+                                              <input onkeypress="return CatchEnter()" id="TextBox__x116591408968714578847444" title="Password" style="BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 10px; BORDER-LEFT: black 1px solid; WIDTH: 122px; CURSOR: default; BORDER-BOTTOM: black 1px solid; HEIGHT: 13px" tabindex="3" type="password" value="" datatype="Any" ctltype="TextBox" ismandatory="1" isdatacontainer="1" reportcaption="Password" />
+                                            </div>
+                                            <div class="dragme" id="toolBarEmail11659140976568314222903" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; Z-INDEX: 939; LEFT: 14px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 126px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 167px; HEIGHT: 20px" istoolbar="no" parentcellid="toolBarEmailCell" origtop="356px" origleft="50px" containerelement="yes">
+                                              <input onkeypress="return CatchEnter()" id="TextBox__x116591409765615428695786" title="Textbox-Email" style="BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 10px; BORDER-LEFT: black 1px solid; WIDTH: 122px; CURSOR: default; BORDER-BOTTOM: black 1px solid; HEIGHT: 13px" tabindex="4" maxlength="255" datatype="Email" ctltype="TextBox" ismandatory="1" isdatacontainer="1" reportcaption="Email Address" sendtoemail="1" />
+                                            </div>
+                                            <div class="dragme" id="toolBarTextArea116591410260913537218362" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; Z-INDEX: 728; LEFT: 14px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 250px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 211px; HEIGHT: 100px" istoolbar="no" parentcellid="toolBarTextAreaCell" origtop="400px" origleft="50px" containerelement="yes">
+                                              <textarea name="TextArea__x" cols="30" rows="5" id="TextArea__x116591410260923255362458" style="BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 10px; BORDER-LEFT: black 1px solid; WIDTH: 246px; CURSOR: default; BORDER-BOTTOM: black 1px solid; FONT-FAMILY: arial; HEIGHT: 95px" tabindex="5" title="Textarea" ctltype="TextArea" ismandatory="0" isdatacontainer="1" reportcaption="Comments"></textarea>
+                                            </div>
+                                            <div class="dragme" id="toolBarLabel116591412314022655079884" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 10px; Z-INDEX: 1096; LEFT: 21px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 62px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 11px; HEIGHT: 16px" istoolbar="no" parentcellid="toolBarLabelCell" origtop="200px" origleft="57px" containerelement="yes">
+                                              <div dir="ltr" style="border-right-color: transparent; border-right-width: 1px; border-right-style: initial; border-top-color: transparent; border-top-width: 1px; border-top-style: initial; font: normal normal normal 10px/normal verdana; overflow-x: hidden; overflow-y: hidden; border-left-color: transparent; border-left-width: 1px; border-left-style: initial; width: 58px; cursor: default; color: rgb(0, 0, 0); border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: initial; height: 11px; background-color: transparent; word-wrap: break-word; text-align: left; ">Full name</div>
+                                            </div>
+                                            <div class="dragme" id="toolBarLabel116591418879617057654597" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 10px; Z-INDEX: 1094; LEFT: 22px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 138px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 57px; HEIGHT: 15px" istoolbar="no" parentcellid="toolBarLabelCell" origtop="246px" origleft="57px" containerelement="yes">
+                                              <div dir="ltr" style="border-right-color: transparent; border-right-width: 1px; border-right-style: initial; border-top-color: transparent; border-top-width: 1px; border-top-style: initial; font: normal normal normal 10px/normal verdana; overflow-x: hidden; overflow-y: hidden; border-left-color: transparent; border-left-width: 1px; border-left-style: initial; width: 134px; cursor: default; color: rgb(0, 0, 0); border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: initial; height: 10px; background-color: transparent; word-wrap: break-word; text-align: left; ">Choose a user name</div>
+                                            </div>
+                                            <div class="dragme" id="toolBarLabel116591418879617057654597x116591427492114297338789" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 10px; Z-INDEX: 1090; LEFT: 22px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 138px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 102px; HEIGHT: 16px" istoolbar="no" parentcellid="toolBarLabelCell" origtop="291px" origleft="57px" containerelement="yes">
+                                              <div dir="ltr" style="border-right-color: transparent; border-right-width: 1px; border-right-style: initial; border-top-color: transparent; border-top-width: 1px; border-top-style: initial; font: normal normal normal 10px/normal verdana; overflow-x: hidden; overflow-y: hidden; border-left-color: transparent; border-left-width: 1px; border-left-style: initial; width: 134px; cursor: default; color: rgb(0, 0, 0); border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: initial; height: 11px; background-color: transparent; word-wrap: break-word; text-align: left; ">Choose a password</div>
+                                            </div>
+                                            <div class="dragme" id="toolBarLabel116591418879617057654597x116591427492114297338789x116591433482818342525002" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 10px; Z-INDEX: 1086; LEFT: 22px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 138px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 148px; HEIGHT: 16px" istoolbar="no" parentcellid="toolBarLabelCell" origtop="337px" origleft="57px" containerelement="yes">
+                                              <div dir="ltr" style="border-right-color: transparent; border-right-width: 1px; border-right-style: initial; border-top-color: transparent; border-top-width: 1px; border-top-style: initial; font: normal normal normal 10px/normal verdana; overflow-x: hidden; overflow-y: hidden; border-left-color: transparent; border-left-width: 1px; border-left-style: initial; width: 134px; cursor: default; color: rgb(0, 0, 0); border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: initial; height: 11px; background-color: transparent; word-wrap: break-word; text-align: left; ">Email address</div>
+                                            </div>
+                                            <div class="dragme" id="toolBarLabel116591418879617057654597x116591427492114297338789x116591433482818342525002x1165914391203126773206" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 10px; Z-INDEX: 936; LEFT: 14px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 138px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 192px; HEIGHT: 16px" istoolbar="no" parentcellid="toolBarLabelCell" origtop="381px" origleft="53px" containerelement="yes">
+                                              <div dir="ltr" style="border-right-color: transparent; border-right-width: 1px; border-right-style: initial; border-top-color: transparent; border-top-width: 1px; border-top-style: initial; font: normal normal normal 10px/normal verdana; overflow-x: hidden; overflow-y: hidden; border-left-color: transparent; border-left-width: 1px; border-left-style: initial; width: 134px; cursor: default; color: rgb(0, 0, 0); border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: initial; height: 11px; background-color: transparent; word-wrap: break-word; text-align: left; ">Comments</div>
+                                            </div>
+                                            <div class="dragme" id="toolBarLabel11659146288282635594312x116591465578128303652724" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-WEIGHT: bold; FONT-SIZE: 10px; Z-INDEX: 1088; LEFT: 10px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 13px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 96px; HEIGHT: 16px" istoolbar="no" parentcellid="toolBarLabelCell" origtop="285px" origleft="45px" containerelement="yes">
+                                              <div dir="ltr" style="border-right-color: transparent; border-right-width: 1px; border-right-style: initial; border-top-color: transparent; border-top-width: 1px; border-top-style: initial; font: normal normal bold 15px/normal verdana; overflow-x: hidden; overflow-y: hidden; border-left-color: transparent; border-left-width: 1px; border-left-style: initial; width: 9px; cursor: default; color: rgb(255, 51, 0); border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: initial; height: 11px; background-color: transparent; word-wrap: break-word; text-align: left; ">*</div>
+                                            </div>
+                                            <div class="dragme" id="toolBarLabel11659146288282635594312" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-WEIGHT: bold; FONT-SIZE: 10px; Z-INDEX: 1092; LEFT: 10px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 13px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 51px; HEIGHT: 16px" istoolbar="no" parentcellid="toolBarLabelCell" origtop="240px" origleft="45px" containerelement="yes">
+                                              <div dir="ltr" style="border-right-color: transparent; border-right-width: 1px; border-right-style: initial; border-top-color: transparent; border-top-width: 1px; border-top-style: initial; font: normal normal bold 15px/normal verdana; overflow-x: hidden; overflow-y: hidden; border-left-color: transparent; border-left-width: 1px; border-left-style: initial; width: 9px; cursor: default; color: rgb(255, 51, 0); border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: initial; height: 11px; background-color: transparent; word-wrap: break-word; text-align: left; ">*</div>
+                                            </div>
+                                            <div class="dragme" id="toolBarLabel11659146288282635594312x116591467173420237365587" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-WEIGHT: bold; FONT-SIZE: 10px; Z-INDEX: 1084; LEFT: 10px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 13px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 143px; HEIGHT: 16px" istoolbar="no" parentcellid="toolBarLabelCell" origtop="332px" origleft="45px" containerelement="yes">
+                                              <div dir="ltr" style="border-right-color: transparent; border-right-width: 1px; border-right-style: initial; border-top-color: transparent; border-top-width: 1px; border-top-style: initial; font: normal normal bold 15px/normal verdana; overflow-x: hidden; overflow-y: hidden; border-left-color: transparent; border-left-width: 1px; border-left-style: initial; width: 9px; cursor: default; color: rgb(255, 51, 0); border-bottom-color: transparent; border-bottom-width: 1px; border-bottom-style: initial; height: 11px; background-color: transparent; word-wrap: break-word; text-align: left; ">*</div>
+                                            </div>
+                                            <div class="dragme" id="toolBarSubmitButton116591474318713487309813" dir="ltr" style="BORDER-RIGHT: medium none; BORDER-TOP: medium none; Z-INDEX: 1156; LEFT: 14px; OVERFLOW: hidden; BORDER-LEFT: medium none; WIDTH: 55px; CURSOR: default; BORDER-BOTTOM: medium none; POSITION: absolute; TOP: 323px; HEIGHT: 22px" istoolbar="no" parentcellid="toolBarSubmitButtonCell" origtop="518px" origleft="50px" containerelement="yes">
+                                              <input id="Submit__x11659147431872789211424" style="BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px; WIDTH: 53px; CURSOR: default; HEIGHT: 19px; BORDER-RIGHT-WIDTH: 1px" onclick="ValidatePage()" type="button" value="Submit" ctltype="Submit" />
+                                            </div>
+                                          </div>
+                                        </div></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      <script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+              </script>
+                    </form></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"></td>
+                  </tr>
+                  <!-- gray line after footer -->
+                  <tr>
+                    <td colspan="3"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" valign="top" class="LearnMoreRow" align="left"></td>
+                  </tr>
+                  <!-- footer -->
+                  <tr>
+                    <td colspan="3" id="tdFooterLinks1"><table width="910" cellpadding="0" cellspacing="0" border="0" dir="ltr">
+                        <tbody>
+                          <tr>
+                            <td width="405" class="MenuFooterSite" align="left"><a class="FooterLinksSite" href="http://www.formlogix.com/Services.aspx" title="formlogix professional services">Services</a> | <a class="FooterLinksSite" href="http://www.formlogix.com/TermOfUse.aspx" title="terms of use">Term of use</a> | <a class="FooterLinksSite" href="http://www.formlogix.com/ReportAnAbuse.aspx" title="Report An Abuse">Abuse</a> | <a class="FooterLinksSite" href="http://www.formlogix.com/Partners.aspx" title="partners">Partners</a> | <a class="FooterLinksSite" href="http://www.formlogix.com/LinkBack.aspx" title="news">Link To Us</a> | <a class="FooterLinksSite" href="http://formlogix.blogspot.com/" target="_blank" title="formlogix Blog">Blog</a> | <a class="FooterLinksSite" href="http://www.formlogix.com/Advertise.aspx" target="_blank" title="formlogix Advertise">Advertise</a></td>
+                            <td width="505" class="MenuFooterSite" align="right">Copyright &copy; 2010-2050 FarmersBuddy.com All rights reserved</td>
+                          </tr>
+                        </tbody>
+                    </table></td>
+                  </tr>
+                  <!-- gray line after footer -->
+                  <tr>
+                    <td height="2" colspan="3" style="height:30px;"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="BottomShadow1"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="BottomShadow2"></td>
+                  </tr>
+                </tbody>
+              </table></TD>
+              <TD class="SideShadowRight">            </TR>
+        </TBODY></TABLE>
+</DIV>
+    
+
+   
+    
+<SCRIPT type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT><SCRIPT src="./Sample_files/ga.js" type="text/javascript"></SCRIPT>
+<SCRIPT type="text/javascript">
+var pageTracker = _gat._getTracker("UA-414530-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+            
+
+
+
+</BODY></HTML>

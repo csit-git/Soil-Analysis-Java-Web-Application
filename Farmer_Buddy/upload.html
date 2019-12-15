@@ -1,0 +1,84 @@
+<html>
+<head>
+<script type="text/javascript">  
+   
+ function changeAction (frm) {   
+      for (var i=0; i < frm.filetype.length; i++)
+   {
+   if (frm.filetype[i].checked)
+      {
+      var type = frm.filetype[i].value;
+      }
+   }
+        
+  if (type==1) {  
+      frm.action ='upload.jsp?val=1';  
+      frm.submit(); return;  
+ }  
+   if (type==2) {  
+      frm.action ='upload.jsp?val=2';  
+      frm.submit(); return;  
+ }  
+    if (type==3) {  
+      frm.action ='upload.jsp?val=3';  
+      frm.submit(); return;  
+ }  
+     if (type==4) {  
+      frm.action ='upload.jsp?val=4';  
+      frm.submit(); return;  
+ }  
+     if (type==5) {  
+      frm.action ='upload.jsp?val=5';  
+      frm.submit(); return;  
+ }  
+
+ else {  
+      frm.action = 'test2.html';  
+      frm.submit();  
+      return;  
+ }  
+   
+   
+ }  
+ </script>  
+</head>
+<body>
+<form name="form1" action="upload.jsp"
+  method="post" enctype="multipart/form-data" onsubmit="return changeAction(this);" >
+
+  <p>Select File Type:
+    <label>
+    <input type="radio" name="filetype" value="1" id="filetype_0">
+AUDIO</label>
+    <br>
+    <label> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="filetype" value="2" id="filetype_1">
+VIDEO</label>
+    <br>
+    <label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="filetype" value="3" id="filetype_2">
+DOC/TEXT</label>
+    <br>
+    <label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="filetype" value="4" id="filetype_3">
+PDF</label>
+    <br>
+    <label>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="radio" name="filetype" value="5" id="filetype_4">
+PPT</label>
+    <br>
+</p>
+  <p>Select A File: 
+    <input type="file" name="first" />
+  
+    <br /><br>
+    <input type="submit" name="button" value="upload" />
+  
+    </p>
+</form>
+</body>
+</html>

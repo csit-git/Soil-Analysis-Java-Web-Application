@@ -1,0 +1,498 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="position: static;" xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+ <title>FarmersBuddy-An Agricultural Portal</title>
+    <link href="FB_Files/cssWeb.css" rel="StyleSheet" type="text/css">
+           
+          <link rel="SHORTCUT ICON" href="FB_Files/New Icon.ico"> 
+     
+<script language="JavaScript" src="FBformValidator.js" type="text/javascript"></script>
+   
+<style type="text/css">
+h1 {font-family:Century Gothic,Tahoma;font-size:30px;margin-bottom:-1px;margin-top:0px;color:#ffffff;}
+h2 {
+font-size:11px;
+margin-bottom:-1px;
+margin-top:1px;
+font-weight:bold;
+      }
+.style1 {
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+}
+farmer1
+{
+display:none;
+}
+
+
+.style2 {color: #FF0000}
+</style>
+
+</head>
+<body class="MainBGColor2" background="New Folder/diving_1024x768.jpg">
+    <div>
+        <table class="MasterGeneralTable" cellpadding="0" cellspacing="0">
+            <tbody><tr valign="top">
+                <td></td>
+                <td class="SideShadowRight"></td>
+            </tr>
+            <!-- page start -->
+             <tr valign="top">
+                <td class="MainTd" align="center"> 
+                    <table dir="ltr" border="0" cellpadding="0" cellspacing="0">
+                        <!-- logo -->
+          <tbody><tr class="LogoRow">
+                            <td width="1" class="WhiteSpaces"></td>
+      <td colspan="2" align="left" valign="top" class="LogoRow"><table cellspacing="0" cellpadding="0" width="933">
+                              <tbody>
+                                <tr>
+                                  <td colspan="8" align="left"><img src="Sample_files/label2_01.gif" alt="logo1" width="933" height="114" /></td>
+                                </tr>
+                                <tr>
+                                  <td width="278" align="left"><img src="Sample_files/label2_02.gif" alt="logo2" width="278" height="49" /></td>
+                                  <td width="108" align="left"><a title="Farmers Buddy Home" href="index.html"><img src="Sample_files/label2_03.gif" alt="home" width="108" height="49" border="0" /></a></td>
+                                  <td width="105" align="left"><a title="Farmers Buddy Bulletin Board" href="index.html"><img src="Sample_files/label2_04.gif" alt="agriboard" width="105" height="49" border="0" /></a></td>
+                                  <td width="108" align="left"><a title="Farmers Buddy User Registration" href="register.html"><img src="Sample_files/label2_05.gif" alt="register" width="108" height="49" border="0" /></a></td>
+                                  <td width="104" align="left"><a title="Farmers Buddy Login" href="Login.jsp" ><img src="Sample_files/label2_06.gif" alt="login" width="104" height="49" border="0" /></a></td>
+                                  <td width="105" align="left"><a title="About Farmers Buddy" href="About Us.html"><img src="Sample_files/label2_07.gif" alt="aboutus" width="105" height="49" border="0" /></a></td>
+                                  <td width="115" align="left"><a title="Contact Farmers Buddy" href="index.html"><img src="Sample_files/label2_08.gif" alt="contactus" width="117" height="49" border="0" /></a></td>
+                                  <td width="43" align="left"><img src="Sample_files/label2_09.gif" alt="logo4" width="8" height="49" /></td>
+                                </tr>
+                              </tbody>
+                            </table></td>
+                    <td width="23" class="WhiteSpaces"></td>
+                        </tr>
+                        <!-- menu -->
+                        
+                        <!-- gray line under menu -->
+                        <tr>
+                            <td colspan="4" class="MenuUnderline"></td>
+                        </tr>
+                        
+                        
+                        <!-- white space after menu -->
+                         <tr bgcolor="WHITE">
+                            <td colspan="4" class="AfterMenuWhiteSpace">                            </td>
+                         </tr>
+                         <!-- main content -->
+                        <tr bgcolor="WHITE">
+                           <td class="WhiteSpaces"></td>
+                            <td colspan="2" align="left" valign="top"><table width="933" border="0" align="center">
+                              <tr>
+                                <td><form method="post" name="reg" id="reg" action="signup.jsp">
+                                <table width="770" border="0" cellpadding="0" cellspacing="0">
+                                <br />
+                                      <tr>
+                                        <td width="10"><img src="Sample_files/BlueTitleBgLeft.gif" alt="l1" /></td>
+        <td align="left" bgcolor="#4f9ece" width="750"><span class="style1">User SignUp</span></td>
+        <td width="10"><img src="Sample_files/BlueTitleBgRight.gif" alt="r1" /></td>
+                                  </tr></table>
+									 
+<table>
+                                      <tr><hr color="#FFFFFF" />
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;User  Type </td>
+                                        <td width="679"><label>
+                                          <select name="usertype" id="usertype" onchange="showandhideTable(this.value);" >
+                                            <option value="1">General Public </option>
+                                            <option value="2">Farmer</option>
+                                            <option value="3">Agriculture Student</option>
+                                            <option value="4">Agriculture Officer</option>
+                                          </select>
+                                        </label></td>
+                                      </tr>
+                                  </table>
+                                  <table width="770" border="0" cellpadding="0" cellspacing="0">
+                                <br />
+                                      <tr>
+                                        <td width="10"><img src="Sample_files/BlueTitleBgLeft.gif" alt="l1" /></td>
+        <td width="750" align="left" bgcolor="#4f9ece" class="style1">Login Details</td>
+        <td width="10"><img src="Sample_files/BlueTitleBgRight.gif" alt="r1" /></td>
+                                  </tr></table>
+									 
+<table>
+                                      <tr><hr color="#FFFFFF" />
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;User  Name<span class="style2">*</span> </td>
+                                        <td width="256"><input type="text" name="username" id="username" onBlur="chkName(this.value);" /><div id="usernameDIV"></div></td>
+                                      </tr>
+                                      <tr>
+                                      <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Password<span class='style2'>*</span> </td>
+                                      <td width="256"><input type="password" name="password" id="password" /></td>
+                                      </tr>
+                                      <tr>
+                                      <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Confirm Password<span class='style2'>*</span> </td>
+                                        <td width="256"><input type="password" name="cnfrmpwd" id="cnfrmpwd" onblur="chkPass(this.value);" />
+                                        <div id="label1" class="ErrorUser"></div></td>
+                                      </tr>
+                                      <tr>
+                                      <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Security Question </td>
+                                        <td width="256"><select name="secques" id="secques" onchange="securityQuestion(this.value);">
+                                            <option value="What's your mother middle name?">What's your mother middle name? </option>
+                                 <option value="What's your Airplane Flyer number?">What's your Airplane Flyer number?</option>
+                                 <option value="What's your driving license number?">What's your driving license number?</option>
+                                            <option value="4">Your Own security question..</option>
+                                          </select></td>
+                                      </tr>
+									  <tr>
+                                      <td id="a" width="222">&nbsp;&nbsp;&nbsp; Enter Question</td>
+                                      <td id="b" width="256"><input type="text" name="sectext" id="sectext" disabled="disabled" /></td>
+                                      </tr>
+                                      <tr>
+                                      <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Enter Answer</td>
+                                      <td width="256" align="left"><input type="text" name="secanswer" id="secanswer"/></td>
+                                      </tr>
+                                  </table>
+                                 
+                              <table width="772" border="0" cellspacing="0" cellpadding="0">
+                                        <tr><hr color="#FFFFFF" />
+                                          <td>
+                                          <table width="771" border="0" cellpadding="0" cellspacing="0">
+                                          <tr>
+                                          <td width="10"><img src="Sample_files/BlueTitleBgLeft.gif" alt="l1" /></td>
+        <td width="750" align="left" bgcolor="#4f9ece" class="style1">Personal Details</td>
+        <td width="10"><img src="Sample_files/BlueTitleBgRight.gif" alt="r1" /></td>
+                                      </tr></table></td>
+                                          <td>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td width="383"><table width="490">
+                                      <tr>
+                                        <td width="222" valign="bottom">&nbsp;&nbsp;&nbsp;&nbsp;Name<span class='style2'>*</span></td>
+                              <td width="256"><hr color="#FFFFFF" /><label>
+                                          <input type="text" name="Name" id="Name"/>
+                                        </label></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;Gender<span class='style2'>*</span></td>
+                                        <td><p>
+                                            <label>
+                                            <input type="radio" name="Gender" value="m" id="Gender_0" checked="checked" />
+                                              Male</label>
+                                            <label>
+                                            <input type="radio" name="Gender" value="f" id="Gender_1" />
+                                              Female </label>
+                                            <br />
+                                        </p></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;Date of Birth<span class='style2'>*</span></td>
+                                        <td><label>
+                                          <select name="year" id="year" onChange="listdates(document.reg.month.value,this.value)">
+                                            <option value="0">Year</option>
+                                            <option value="1960">1960</option>
+                                            <option value="1961">1961</option>
+                                            <option value="1962">1962</option>
+                                            <option value="1963">1963</option>
+                                            <option value="1964">1964</option>
+                                            <option value="1965">1965</option>
+                                            <option value="1966">1966</option>
+                                            <option value="1967">1967</option>
+                                            <option value="1968">1968</option>
+                                            <option value="1969">1969</option>
+                                            <option value="1970">1970</option>
+                                            <option value="1971">1971</option>
+                                            <option value="1972">1972</option>
+                                            <option value="1973">1973</option>
+                                            <option value="1974">1974</option>
+                                            <option value="1975">1975</option>
+                                            <option value="1976">1976</option>
+                                            <option value="1977">1977</option>
+                                            <option value="1978">1978</option>
+                                            <option value="1979">1979</option>
+                                            <option value="1980">1980</option>
+                                            <option value="1981">1981</option>
+                                            <option value="1982">1982</option>
+                                            <option value="1983">1983</option>
+                                            <option value="1984">1984</option>
+                                            <option value="1985">1985</option>
+                                            <option value="1986">1986</option>
+                                            <option value="1987">1987</option>
+                                            <option value="1988">1988</option>
+                                            <option value="1989">1989</option>
+                                            <option value="1990">1990</option>
+                                            <option value="1991">1991</option>
+                                            <option value="1992">1992</option>
+                                        </select></label>
+                                          <label>
+                                          <select name="month" id="month" onChange="listdates(this.value,document.reg.year.value)">
+                                            <option value="0">Mon</option>
+                                            <option value="1">Jan</option>
+                                            <option value="2">Feb</option>
+                                            <option value="3">Mar</option>
+                                            <option value="4">Apr</option>
+                                            <option value="5">May</option>
+                                            <option value="6">Jun</option>
+                                            <option value="7">Jul</option>
+                                            <option value="8">Aug</option>
+                                            <option value="9">Sept</option>
+                                            <option value="10">Oct</option>
+                                            <option value="11">Nov</option>
+                                            <option value="12">Dec</option>
+                                          </select></label>
+                                          <span id="dateselection">
+					                      <select name="date">
+					                      <option>dd</option>
+					                      </select> </span>
+                                        </label></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;Occupation</td>
+                                        <td><label>
+                                          <input type="text" name="occupation" id="occupation" />
+                                        </label></td>
+                                      </tr>
+                                      <tr>
+                                        <td  valign="top">&nbsp;&nbsp;&nbsp;&nbsp;Contact Address<span class='style2'>*</span></td>
+                                      <td><label>
+                                          <textarea name="address" id="address" cols="25" rows="5"></textarea>
+                                        </label></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;City<span class='style2'>*</span></td>
+                                        <td><label>
+                                          <input type="text" name="city" id="city" />
+                                        </label></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;Country<span class='style2'>*</span></td>
+                                        <td><label>
+                                          <input type="text" name="country" id="country" />
+                                        </label></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;Email Id</td>
+                                        <td><label>
+                                          <input type="text" name="emailId" id="emailId" />
+                                        </label></td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;Telephone</td>
+                                        <td>
+                                          <input name="areacode"  type="text" id="areacode" maxlength="5" style="width:50px"/>
+                                          <input type="text" name="number" id="number" maxlength="7" style="width:81px"  />                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;Mobile No.</td>
+                                        <td>
+                                          <input type="text" name="mobile" id="mobile" maxlength="10" />                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;Fax No.</td>
+                                        <td>
+                                          <input name="areafax" type="text" id="areafax"  maxlength="5" style="width:50px"/>
+                                          <input type="text" name="numberfax" id="numberfax" maxlength="7" style="width:81px"    />                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2"> </td>
+                                      </tr>
+                                    </table></td>
+                                          <td  valign="top" width="383"></td>
+                                        </tr>
+                                        <tr><table id="farmer" width="770" style="display:none" cellpadding="0" cellspacing="0">
+                                          <tr><td width="10"><img src="Sample_files/BlueTitleBgLeft.gif" alt="l1" /></td>
+        <td width="750" align="left" bgcolor="#4f9ece" class="style1"><div id="header">Agricultural Practices</div></td>
+        <td width="10"><img src="Sample_files/BlueTitleBgRight.gif" alt="r1" /></td></tr>
+                                      
+        </table><table id="student" width="770" style="display:none" cellpadding="0" cellspacing="0">
+                                          <tr><td width="10"><img src="Sample_files/BlueTitleBgLeft.gif" alt="l1" /></td>
+        <td width="750" align="left" bgcolor="#4f9ece" class="style1"><div id="header">Academic Details</div></td>
+        <td width="10"><img src="Sample_files/BlueTitleBgRight.gif" alt="r1" /></td></tr>
+                                      
+        </table><table id="officer" width="770" style="display:none" cellpadding="0" cellspacing="0">
+                                          <tr><td width="10"><img src="Sample_files/BlueTitleBgLeft.gif" alt="l1" /></td>
+        <td width="750" align="left" bgcolor="#4f9ece" class="style1"><div id="header">Professional Details</div></td>
+        <td width="10"><img src="Sample_files/BlueTitleBgRight.gif" alt="r1" /></td></tr>
+                                      
+        </table></tr><tr><table id="FarmerTable" style="display:none">
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Type Of  Agriculture</td>
+                                        <td width="256"><label><select name="agritype" id="agritype">
+                                            <option value="1">Shifting Agriculture</option>
+                                            <option value="2">Subsistence Farming</option>
+                                            <option value="3">Intensive Agriculture</option>
+                                            <option value="4">Extensive Agriculture</option>
+                                            <option value="5">Commercial Agriculture</option>
+                                            <option value="6">Plantation Agricuture</option>
+                                            <option value="7">Mixed Farming</option>
+                                            <option value="8">Monoculture</option>
+                                            <option value="9">Dry Farming</option>
+                                           </select></label></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Village Name<span class='style2'>*</span></td>
+                                        <td width="256"><input type="text" name="villname" id="villname" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Land Possessed</td>
+                                        <td width="256"><input type="text" name="land" id="land" />acres</td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Annual Income</td>
+                                        <td width="256"><label>
+                                          <input type="text" name="income" id="income" />
+                                        </label></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222"  valign="top">&nbsp;&nbsp;&nbsp;&nbsp;Crops Grown<span class='style2'>*</span></td>
+                                      <td width="256"><label>
+                                          <textarea name="crops" id="crops" cols="25" rows="5"></textarea>
+                                        </label></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;Fertilizers Used<span class='style2'>*</span></td>
+                                        <td width="256"><label>
+                                          <textarea name="fertilizers" id="fertilizers" cols="25" rows="5"></textarea>
+                                        </label></td>
+                                      </tr>
+                                      </table><table id="StudentTable" style="display:none">
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Course Name<span class='style2'>*</span></td>
+                                        <td width="256"><label><input type="text" name="coursename" id="coursename" /></label></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Year<span class='style2'>*</span></td>
+                                        <td width="256"><input type="text" name="yr" id="yr" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;College Name<span class='style2'>*</span></td>
+                                        <td width="256"><input type="text" name="clgname" id="clgname" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;University<span class='style2'>*</span></td>
+                                        <td width="256"><label>
+                                          <input type="text" name="university" id="university" />
+                                        </label></td>
+                                      </tr>
+                                      
+                                      </table>
+                                      <table id="OfficerTable" style="display:none">
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Specialization<span class='style2'>*</span></td>
+                                        <td width="256"><label><input type="text" name="specialization" id="specialization" /></label></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Organization<span class='style2'>*</span></td>
+                                        <td width="256"><input type="text" name="org" id="org" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Location<span class="style2">*</span></td>
+                                        <td width="256"><input type="text" name="loc" id="loc" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Website</td>
+                                        <td width="256"><label>
+                                          <input type="text" name="website" id="website" />
+                                        </label></td>
+                                      </tr>
+                                      
+                                      </table> </tr>
+                                      <table align="center">
+                                      <tr>
+                                      
+                                     <td> <input type="submit" name="submit" value="submit" /></td></tr></table>
+                                      </table>
+                                </form></td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </table></td>
+                          
+                          <td colspan="4"></td>
+              </tr>
+              
+               <SCRIPT language="JavaScript">
+                var frmvalidator  = new Validator("reg");
+                frmvalidator.addValidation("Name","req","Please enter your Name");
+				frmvalidator.addValidation("username","req","Please enter your User Name");
+				frmvalidator.addValidation("password","req","Please enter your Password");
+				frmvalidator.addValidation("password","minlen=6","Password atleast 6 characters");
+				frmvalidator.addValidation("cnfrmpwd","req","Please enter your password again");
+			    frmvalidator.addValidation("Name","alpha");
+				frmvalidator.addValidation("emailId","maxlen=50");
+                frmvalidator.addValidation("city","req");
+				frmvalidator.addValidation("country","req");
+                frmvalidator.addValidation("emailId","email");
+				frmvalidator.addValidation("emailId","email","Pleas enter valid Email Id");
+                frmvalidator.addValidation("areacode","numeric");
+				frmvalidator.addValidation("number","numeric");
+				frmvalidator.addValidation("mobile","numeric");
+				frmvalidator.addValidation("areafax","numeric");
+				frmvalidator.addValidation("numberfax","numeric");
+				frmvalidator.addValidation("address","maxlen=400");
+				if(document.getElementById("usertype").value==2)
+				{
+				 frmvalidator.addValidation("villname","req","Please enter your village name");
+				 frmvalidator.addValidation("crops","req","Please enter the crops grown by you");
+				 frmvalidator.addValidation("fertilizers","req","Please enter the fertilizers used by you");
+				}
+				if(document.reg.usertype.value==3)
+				{
+				 frmvalidator.addValidation("coursename","req","Please enter your course name");
+				 frmvalidator.addValidation("yr","req","Please enter your year of study");
+				 frmvalidator.addValidation("clgname","req","Please enter your college name");
+				 frmvalidator.addValidation("university","req","Please enter your university name");
+				}
+				if(document.getElementById("usertype").value==4)
+				{
+				 frmvalidator.addValidation("specialization","req","Please enter your password again");
+				 frmvalidator.addValidation("org","req","Please enter your password again");
+				 frmvalidator.addValidation("loc","req","Please enter your password again");
+				}
+                
+				</SCRIPT>
+                    
+                        <!-- gray line after footer -->
+                        <tr>
+                            <td colspan="4"></td>
+                        </tr>
+                        <tr>
+                           <td class="WhiteSpaces"></td>
+                            <td colspan="2" class="LearnMoreRow" align="left" valign="top">
+                                
+                           </td>
+                            <td class="WhiteSpaces"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="height: 30px;"></td>
+                        </tr>
+                         
+        
+                        <!-- footer -->
+                        <tr>
+                           <td class="WhiteSpaces"></td>
+                            <td colspan="2" align="left" valign="top" id="tdFooterLinks1">
+                  <table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody><tr>
+                                      <td class="MenuFooterSite" align="right" width="45%">Copyright © 2010 Farmers Buddy  All rights reserved</td>
+                                    </tr>
+                                </tbody></table>                            </td>
+                          <td class="WhiteSpaces"></td>
+                        </tr>
+                        <!-- gray line after footer -->
+                        <tr>
+                            <td colspan="4" style="height: 30px;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="BottomShadow1"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="BottomShadow2"></td>
+                        </tr>
+               </tbody></table>               </td>
+                <td class="SideShadowRight"></td>
+            </tr>
+        </tbody></table>
+</div>
+    
+            
+
+</body></html>

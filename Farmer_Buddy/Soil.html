@@ -1,0 +1,78 @@
+<html>
+<head>
+<script language="javascript" type="text/javascript"> 
+
+function generate(a)
+{
+ var list=a;
+ if(list=="1")
+ {
+  document.getElementById("crops").src="redblack_soil.html";
+ }
+ else if(list=="2")
+ {
+ document.getElementById("crops").src="desert_soil.html";
+ }
+  else if(list=="3")
+ {
+ document.getElementById("crops").src="black_soil.html";
+ }
+  else if(list=="4")
+ {
+ document.getElementById("crops").src="red_soil.html";
+ }
+ else if(list=="5")
+ {
+ document.getElementById("crops").src="laterite_soil.html";
+ }
+ else if(list=="6")
+ {
+ document.getElementById("crops").src="alluvial_soil.html";
+ }
+  else if(list=="7")
+ {
+ document.getElementById("crops").src="skeletal_soil.html";
+ }
+  else if(list=="8")
+ {
+ document.getElementById("crops").src="redyellow_soil.html";
+ }
+  else if(list=="9")
+ {
+ document.getElementById("crops").src="redloamysandy_soil.html";
+ }
+  else if(list=="10")
+ {
+ document.getElementById("crops").src="redloamy_soil.html";
+ }
+  else if(list=="11")
+ {
+ document.getElementById("crops").src="greybrown_soil.html";
+ }
+  else if(list=="12")
+ {
+ document.getElementById("crops").src="mountain_soil.html";
+ }
+}
+</script></head>
+<body>
+
+<select name="list" size="1" id="list" onChange="generate(this.value);">
+<option value="select">-select one-</option>
+<option value="1">Red and Black Soil</option>
+<option value="2">Desert Soil</option>
+<option value="3">Black Soil</option>
+<option value="4">Red Soil</option>
+<option value="5">Laterite and Lateritic Soil</option>
+<option value="6">Alluvial Soil</option>
+<option value="7">Skeletal Soil</option>
+<option value="8">Red and Yellow Soil</option>
+<option value="9">Red Loamy and Sandy Soil</option>
+<option value="10">Red Loamy</option>
+<option value="11">Grey and Brown Soil</option>
+<option value="12">Mountain Soil</option>
+</select>
+<div id="opt">
+  <iframe id="crops" style="border:#FFFFFF" height="1300" width="1300"> </iframe>
+</div>
+</body></html>

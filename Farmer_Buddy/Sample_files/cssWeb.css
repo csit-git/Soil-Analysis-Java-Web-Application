@@ -1,0 +1,1263 @@
+﻿.MainBGColor2
+{
+	background-color:#dcdada;
+}
+
+
+.MasterGeneralTable
+{
+	  padding:opx;
+	  margin-left:auto;
+	  margin-right:auto;
+	  width:910px;
+	  background-color:#ffffff;
+	   
+}
+
+.MainTd
+{
+	  padding:opx;
+	  margin:0px;
+	  width:900px;
+}
+
+.BasicTable
+{
+	 padding:0px;
+	 margin:0px;
+	 width:100%;
+}
+
+.SideShadowLeft
+{
+	background-image:url(Images/WebSite/Graphic/Common/LeftShadow.gif);
+	background-repeat: repeat-y;
+	width:5px;
+	height:100%;
+}	
+
+.SideShadowRight
+{
+	background-image:url(Images/WebSite/Graphic/Common/RightShadow.gif);
+	background-repeat: repeat-y;
+	width:5px;
+	height:100%;
+}	
+
+.BottomShadow1
+{
+	 background-color:#b8b8b8;
+	width:100%;
+	height:2px;
+}	
+
+.BottomShadow2
+{
+	 background-color:#c6c6c6;
+	width:100%;
+	height:2px;
+}	
+
+.blueFont
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	text-align:left;
+}
+.BasicFont
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	text-align:left;
+	font-weight:normal;
+}
+.BasicFont2
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	font-weight:normal;
+}
+.BasicFontHebrew
+{
+	text-align:right;
+	font-family:Arial;
+	font-size:13px;
+	color:#222222;
+	
+}
+
+
+.BoldBasicFont
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	text-align:left;
+	font-weight:bold;
+}
+
+.GrayBasicFont
+{
+ font-family:MS Reference Sans Serif,Tahoma,Arial;
+ font-size:13px;
+ color:#7F7A7A;
+}
+
+.OrangeBasicFont
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#e48529;
+	text-align:left;
+	font-weight:bold;
+}
+
+.BlueBasicFont
+{
+	font-family:"MS Reference Sans Serif", Tahoma, Arial;
+	font-size:14px;
+	color:#2f669c;
+	text-align:left;
+	font-weight:bold;
+}
+
+.BlueBasicFontNoAlign
+{
+	font-family:"MS Reference Sans Serif", Tahoma, Arial;
+	font-size:14px;
+	color:#2f669c;
+	font-weight:bold;
+}
+
+.BlueBoldUnderlinedBasicFont
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#0774ce;
+	text-align:left;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+.OrangeBoldUnderlinedBasicFont
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#e48529;
+	text-align:left;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+.WhiteSpaces
+{
+	width:25px;
+	background-color:#ffffff;
+}
+
+.GraySpaces
+{
+	width:25px;
+	background-color:#aba9a9;
+	
+}
+
+.PaleGraySpaces
+{
+	width:25px;
+	background-color:#eeeeee;
+	height:19px;
+}
+
+.MainContentTable
+{
+	width:850px;
+	padding:opx;
+	margin:0px;
+	
+}
+
+.MenuBGColor
+{
+	background-color:#aaa9a9;
+}
+
+.slogan
+{
+ color:#b7babc;
+ font-family:Arial;
+ font-size:12px;
+ text-decoration:none;
+ vertical-align:bottom;
+}
+
+.LogoRow
+{
+	background-color:#ffffff;
+	height:86px;
+}
+
+.MenuRow
+{
+	background-color:4f9ece;
+	height:28px;
+	color:#ffffff;
+	font-weight:normal;
+}
+
+	a.BigMenuItems:link
+	{
+		color:#ffffff;
+		text-decoration:none;
+		font-family :Arial;
+		font-size:14px;
+	    font-weight:normal;
+	}
+	a.BigMenuItems:visited
+	{
+		color:#ffffff;
+		text-decoration:none;
+		font-family :Arial;
+		font-size:14px;
+	    font-weight:normal;
+	}
+	
+	a.BigMenuItems:hover
+	{
+		color:#ffffff;
+		text-decoration:underline;
+		font-family :Arial;
+		font-size:14px;
+	    font-weight:normal;
+	}
+	
+	a.BigMenuItems:active
+	{
+		color:#ffffff;
+		text-decoration:none;
+		font-family :Arial;
+		font-size:14px;
+	    font-weight:normal;
+	}
+	
+	a.BigBoldMenuItems:link
+	{
+		color:#fdeb75;
+		text-decoration:none;
+		font-family :Arial;
+		font-size:14px;
+	    font-weight:bold;
+	}
+	a.BigBoldMenuItems:visited
+	{
+		color:#fdeb75;
+		text-decoration:none;
+		font-family :Arial;
+		font-size:14px;
+	    font-weight:bold;
+	}
+	
+	a.BigBoldMenuItems:hover
+	{
+		color:#fdeb75;
+		text-decoration:underline;
+		font-family :Arial;
+		font-size:14px;
+	    font-weight:bold;
+	}
+	
+	a.BigBoldMenuItems:active
+	{
+		color:#fdeb75;
+		text-decoration:none;
+		font-family :Arial;
+		font-size:14px;
+	    font-weight:bold;
+	}
+	
+.MenuUnderline
+{
+	background-color:#9a9898;
+	height:1px;	
+}
+
+.MainBlueBox
+{
+	background-image:url(Images/WebSite/Graphic/Default/MainBlueBox.jpg);
+	 width:602px;
+	 height:221px;
+}
+
+.MainBlueBoxEsp
+{
+	background-image:url(Images/Resources/esp/MainBlueBox.jpg);
+	 width:602px;
+	 height:221px;
+}
+
+.HSpace15
+{
+	height:15px;	
+}
+
+.HSpace10
+{
+	height:10px;	
+}
+
+.HSpace5
+{
+	height:5px;	
+}
+
+.HDottedLine
+{
+	background-image:url(Images/WebSite/Graphic/Common/HDottedLine.gif);
+	background-repeat: repeat-x;
+	height:1px;
+	width:100%;
+}
+.VDottedLine
+{
+	background-image:url(Images/WebSite/Graphic/Common/VDottedLine.gif);
+	background-repeat: repeat-y;
+	width:1px;
+	height:100%;
+}
+
+.WhiteBasicFont
+{
+	font-family:Arial;
+	font-size:12px;
+	color:#ffffff;
+	text-align:left;
+	font-weight:bold;
+	
+}
+
+a.WhiteBasicFont:link
+{
+	font-family:Arial;
+	font-size:12px;
+	color:#ffffff;
+	text-align:left;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a.WhiteBasicFont:visited
+{
+	font-family:Arial;
+	font-size:12px;
+	color:#ffffff;
+	text-align:left;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a.WhiteBasicFont:hover
+{
+	font-family:Arial;
+	font-size:12px;
+	color:#ffffff;
+	text-align:left;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a.BigWhiteFont:link
+{
+	font-family:Century Gothic,Tahoma;
+	font-size:30px;
+	color:#ffffff;
+	text-align:left;
+	text-decoration:none;
+}
+
+a.BigWhiteFont:visited
+{
+	font-family:Century Gothic,Tahoma;
+	font-size:30px;
+	color:#ffffff;
+	text-align:left;
+	text-decoration:none;
+}
+
+a.BigWhiteFont:hover
+{
+	font-family:Century Gothic,Tahoma;
+	font-size:30px;
+	color:#ffffff;
+	text-align:left;
+	text-decoration:none;
+}
+
+.MainWritingArea
+{
+	width:100%;
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	text-align:left;
+	background-color:#f8f8fa;
+    padding:15px;
+}
+
+
+a.BiggerBlueLink:link 
+{
+ color:#0774ce;
+ font-family:Tahoma;
+ font-size:13px;
+ text-decoration:underline;
+}
+	
+a.BiggerBlueLink:visited 
+{
+ color:#0774ce;
+font-family:Tahoma;
+ font-size:13px;
+ text-decoration:underline;
+}
+	
+a.BiggerBlueLink:hover
+{
+ color:#0774ce;
+ font-family:Tahoma;
+ font-size:13px;
+ text-decoration:underline;
+}
+
+a.DarkerBlueLink:link 
+{
+ color:#115c88;
+ font-family:Tahoma;
+ font-size:13px;
+ text-decoration:underline;
+}
+	
+a.DarkerBlueLink:visited 
+{
+ color:#115c88;
+font-family:Tahoma;
+ font-size:13px;
+ text-decoration:underline;
+}
+	
+a.DarkerBlueLink:hover
+{
+ color:#115c88;
+ font-family:Tahoma;
+ font-size:13px;
+ text-decoration:underline;
+}
+.GoogleAdVertical1
+{
+	text-align:left;
+	height:43px;
+	width:100%;
+}
+
+.TitleFont
+{
+	 font-family:Arial;
+	 font-size:14px;
+	 font-weight:bold;
+	 color:#ffffff;
+	 height:21px;
+	 text-align:left;
+}
+
+
+.AfterMenuWhiteSpace
+{
+	background-color:#ffffff;
+	height:5px;	
+}	
+	
+.HolloUserRow
+{
+	background-color:#eeeeee;
+	height:19px;	
+}
+
+
+.HelloUser
+	{
+	font-family :Tahoma;
+	font-size:11px;
+	color:#2E548A;	
+	font-weight: normal;
+	}
+
+#tagCloud
+{  
+	width:200px;
+	border:solid 1px #ccc;
+	padding:5px;
+	margin-bottom:10px;
+	text-align:justify;	
+} 
+
+#tagCloud A
+{    
+	text-decoration:none;
+	margin-left:5px;
+	margin-right:5px;
+	font-family:Trebuchet MS, Verdana, Arial;
+	text-transform:lowercase;
+}
+	                
+#tagCloud A:hover
+{
+	color:#00cc00;
+	text-decoration:underline;
+}
+						        
+#tagCloud A.weight1
+{
+	color: #ff9900;
+	font-size: 25px;
+	font-weight:bolder;
+}
+
+#tagCloud A.weight2
+
+{
+	color: #4169e1;
+	font-size:23px; 
+	font-weight:bolder;
+}
+													       
+#tagCloud A.weight3
+{
+	color: #009eff;
+	font-size: 20px;
+	font-weight:bolder;
+}
+
+#tagCloud A.weight4
+{    
+	color: #4188cf;
+	font-size: 17px;
+	font-weight:bold;
+}
+	    
+#tagCloud A.weight5
+{    
+	color: #83bcd8;
+	font-size: 13px;
+	font-weight:bold;
+}
+
+.weight6
+{    
+	 font-family:Tahoma;
+	color: gray;
+	font-size: 10px;
+}
+
+
+.LatestFormsName
+{
+	
+	border-width:1px;
+	border-style:solid;
+	border-color:#d6d6d6;
+}
+
+a.LatestFormsNameLink:link 
+{
+	font-family :Tahoma;
+	font-size:13px;
+	color:#0774ce;	
+	font-weight: bold;
+}
+	
+a.LatestFormsNameLink:visited 
+{
+	font-family :Tahoma;
+	font-size:13px;
+	color:#0774ce;	
+	font-weight: bold;
+}
+	
+a.LatestFormsNameLink:hover
+{
+	font-family :Tahoma;
+	font-size:13px;
+	color:#0774ce;	
+	font-weight: bold;
+}
+
+.LatestFormsTag
+{
+	
+	border-width:1px;
+	border-style:solid;
+	border-color:#d6d6d6;
+}
+
+a.LatestFormsTagLink:link 
+{
+	font-family :Tahoma;
+	font-size:13px;
+	color:#222222;	
+	font-weight:normal;
+}
+	
+a.LatestFormsTagLink:visited 
+{
+	font-family :Tahoma;
+	font-size:13px;
+	color:#222222;	
+	font-weight:normal;
+}
+	
+a.LatestFormsTagLink:hover
+{
+	font-family :Tahoma;
+	font-size:13px;
+	color:#222222;	
+	font-weight:normal;
+}
+
+.LatestFormsDetails
+{
+	
+	border-width:1px;
+	border-style:solid;
+	border-color:#d6d6d6;
+}
+
+a.LatestFormsDetailsLink:link 
+{
+	font-family :Tahoma;
+	font-size:13px;
+	color:#e48529;	
+	font-weight:bold;
+}
+	
+a.LatestFormsDetailsLink:visited 
+{
+	font-family :Tahoma;
+	font-size:13px;
+	color:#e48529;	
+	font-weight:bold;
+}
+	
+a.LatestFormsDetailsLink:hover
+{
+	font-family :Tahoma;
+	font-size:13px;
+	color:#e48529;	
+	font-weight:bold;
+}
+
+.LearnMoreRow
+{
+	font-family :arial;
+	font-size:11px;
+	color:#4f9ece;	
+	font-weight:normal;
+}
+
+a.LearnMoreLinks:link 
+{
+	font-family :arial;
+	font-size:11px;
+	color:#4f9ece;	
+	font-weight:normal;
+}
+	
+a.LearnMoreLinks:visited 
+{
+	font-family :arial;
+	font-size:11px;
+	color:#4f9ece;	
+	font-weight:normal;
+}
+	
+a.LearnMoreLinks:hover
+{
+	font-family :arial;
+	font-size:11px;
+	color:gray;	
+	font-weight:normal;
+}
+
+.MenuFooterSite
+{
+ font-family:Tahoma;
+ font-size:12px;
+ color:#7F8888;
+}
+
+a.FooterLinksSite:link 
+{
+ color:#7F8888;
+ font-family:Tahoma;
+ font-size:12px;
+ text-decoration:underline;
+ font-weight:normal;
+}
+	
+a.FooterLinksSite:visited 
+{
+ color:#7F8888;
+ font-family:Tahoma;
+ font-size:12px;
+ text-decoration:underline;
+ font-weight:normal;
+}
+	
+a.FooterLinksSite:hover
+{
+ color:#4f9ece;
+ font-family:Tahoma;
+ font-size:12px;
+ text-decoration:underline;
+ font-weight:normal;
+}
+
+.QuoteWriting
+{
+ color:#222222;
+ font-family:Tahoma;
+ font-size:13px;
+ text-decoration:none;
+ font-weight:normal;
+ font-style:italic
+}
+
+.QuoteNameWriting
+{
+ color:#222222;
+ font-family:Tahoma;
+ font-size:13px;
+ text-decoration:none;
+ font-weight:bold;
+}
+
+a.BasicFontGray:link 
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	text-align:left;
+}
+	
+a.BasicFontGray:visited 
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	text-align:left;
+}
+	
+a.BasicFontGray:hover
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	text-align:left;
+}
+
+.PartnersLink:link
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	text-align:left;
+	text-decoration:underline;	
+}
+
+.PartnersLink:visited
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	text-align:left;	
+	text-decoration:underline;	
+}
+
+.PartnersLink:hover
+{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#e48529;
+	text-align:left;
+	text-decoration:underline;		
+}
+
+table.UserFormsTable 
+{
+	border-width: 0px;
+	border-spacing: ;
+	border-style: solid;
+	border-color: #d0d0d1;
+	border-collapse: collapse;
+	background-color: white;
+}
+
+a.srollover1 {
+    display: block;
+    width: 144px;
+    height: 93px;
+    background: url("http://www.formlogix.com/Images/WebSite/Graphic/Default/CreateRollOver.jpg") 0 0 no-repeat;
+    text-decoration: none;
+}
+ 
+a:hover.srollover1 {
+    background-position: -144px 0;
+}
+
+a.srollover2 {
+    display: block;
+    width: 180px;
+    height: 93px;
+    background: url("http://www.formlogix.com/Images/WebSite/Graphic/Default/PublishRollOver.jpg") 0 0 no-repeat;
+    text-decoration: none;
+}
+ 
+a:hover.srollover2 {
+    background-position: -180px 0;
+} 
+
+a.srollover3 {
+    display: block;
+    width: 175px;
+    height: 93px;
+    background: url("http://www.formlogix.com/Images/WebSite/Graphic/Default/ManageRollOver.jpg") 0 0 no-repeat;
+    text-decoration: none;
+}
+ 
+a:hover.srollover3 {
+    background-position: -175px 0;
+}   
+
+a.srolloveresp1 {
+    display: block;
+    width: 144px;
+    height: 93px;
+    background: url("http://www.formlogix.com/Images/Resources/esp/CrearRollOver.jpg") 0 0 no-repeat;
+    text-decoration: none;
+}
+ 
+a:hover.srolloveresp1 {
+    background-position: -144px 0;
+}
+
+a.srolloveresp2 {
+    display: block;
+    width: 180px;
+    height: 93px;
+    background: url("http://www.formlogix.com/Images/Resources/esp/PublicarRollOver.jpg") 0 0 no-repeat;
+    text-decoration: none;
+}
+ 
+a:hover.srolloveresp2 {
+    background-position: -180px 0;
+} 
+
+a.srolloveresp3 {
+    display: block;
+    width: 175px;
+    height: 93px;
+    background: url("http://www.formlogix.com/Images/Resources/esp/AdministrarRollOver.jpg") 0 0 no-repeat;
+    text-decoration: none;
+}
+ 
+a:hover.srolloveresp3 {
+    background-position: -175px 0;
+}   
+
+ a.HelpBiggerGrayLink:link
+	{
+		font-family:Tahoma;
+		font-size:13px;
+		color:#54545c;	
+		font-weight:normal;
+		text-decoration:none;
+	}
+	a.HelpBiggerGrayLink:visited
+	{
+		font-family:Tahoma;
+		font-size:13px;
+		color:#B52121;
+		font-weight:normal;
+		text-decoration:none;
+	} 
+	a.HelpBiggerGrayLink:hover
+	{
+		font-family:Tahoma;
+		font-size:13px;
+		color:#0774CE;
+		text-decoration:none;
+		
+	}
+	
+	.LoginHeader
+{
+ font-family:Arial;
+ font-size:12px;
+ color:#ffffff;
+ font-weight:bold;
+}
+
+.WelcomeNoteSubTitle
+{
+ font-family:Arial;
+ font-size:14px;
+ color:#E48529;
+ font-weight:bold;
+ text-decoration:none;
+}
+
+.BiggerGrayWriting
+{
+ font-family:Arial;
+ font-size:12px;
+ color:#7F7A7A;
+}
+
+.HelpBiggerGray
+{
+font-family:Tahoma;
+font-size:13px;
+color:#54545c;	
+font-weight:normal;
+text-decoration:none;
+}
+
+.LoginBgDark
+{
+	background-color:#00cc00;
+}
+
+.GrayWriting
+{
+ font-family:Tahoma;
+ font-size:11px;
+ color:#54545c;	
+ font-weight:normal;	
+}
+
+.LoginBgLight
+{
+ background-color:#f2f2f2;
+}
+
+ a.BlueLink:link
+	{
+		color:#0774CE;
+		text-decoration:underline;
+	}
+	a.BlueLink:visited
+	{
+		color:#0774CE;
+		text-decoration:underline;
+	}
+	a.BlueLink:hover
+	{
+		color:#7A8187;
+		text-decoration:underline;
+	}
+	
+	 a.WhiteLink:link
+	{
+		color:#ffffff;
+	}
+	a.WhiteLink:visited
+	{
+		color:#ffffff;
+	}
+	a.WhiteLink:hover
+	{
+		color:#ffffff;
+	}
+	
+	
+	.OrangeWritingUnderline
+	{
+	font-family:Tahoma;
+	 font-size:11px;
+	 color:#E48529;
+	 text-decoration:underline;
+	 font-weight:bold;
+    }
+    
+    .TuringHelp
+{
+ font-family:Tahoma;
+ font-size:11px;
+ color:#1A70B6;
+ background-color:#F2F2F2;
+}
+
+.SaveUser
+   {
+     font-family:Arial;
+	 font-size:13px;
+	 color:#0E6FBE;
+	 font-weight:bold;
+   } 
+   
+    .ErrorUser
+   {
+     font-family:Arial;
+	 font-size:13px;
+	 color:#C81919;
+	 font-weight:bold;
+   } 
+   
+   .RegisteredUserLoginTable
+	{
+		border-color:#A19FAC;
+		border-style:solid;
+		border-width:1px;
+		background-color:#ffffff;
+	}
+	
+	
+	.RegisteredUserLoginTitle
+	{
+		font-family:Arial;
+		font-size:12px;
+		font-weight:bold;
+		color:#7779B4;
+	}
+	
+	 a.GrayLink:link
+	{
+		font-family:Arial;
+		font-size:10px;
+		color:#6F6969;
+		text-decoration:underline;
+	}
+	a.GrayLink:visited
+	{
+		font-family:Arial;
+		font-size:10px;
+		color:#6F6969;
+		text-decoration:underline;
+	} 
+	
+	a.GrayLink:hover
+	{
+		font-family:Arial;
+		font-size:10px;
+		color:#0774CE;
+		text-decoration:underline;
+	}
+	
+	.LoginError
+{
+ font-family:Tahoma;
+ font-size:10px;
+ color:red;
+}
+
+.HelpGrayOption
+	{
+		font-family:Arial;
+		font-size:12px;
+		color:Gray;
+		font-weight:bold;
+	}
+	
+	 a.HelpBlueLink:link
+	{
+		font-family:Arial;
+		font-size:12px;
+		color:#0774CE;
+		text-decoration:underline;
+		font-weight:bold;
+	}
+	a.HelpBlueLink:visited
+	{
+		font-family:Arial;
+		font-size:12px;
+		color:#0774CE;
+		text-decoration:underline;
+		font-weight:bold;
+	}
+	a.HelpBlueLink:hover
+	{
+		font-family:Arial;
+		font-size:12px;
+		color:#7A8187;
+		text-decoration:underline;
+		font-weight:bold;
+	}
+	
+	.ToolBoxInnerFrames
+	{
+	border-color:#c8cbd4;
+	 border-style:solid;
+	  border-width:1px;
+	   background-color:#ffffff;
+	}
+	
+	.EditPreferencesBrackets
+{
+ color:#D97718;
+ font-family:Arial;
+ font-size:11px;
+ text-decoration:none;
+ font-weight:normal;
+}	
+	
+a.EditPreferences:link 
+{
+ color:#D97718;
+ font-family:Arial;
+ font-size:11px;
+ text-decoration:none;
+ font-weight:normal;
+}
+	
+a.EditPreferences:visited
+{
+ color:#D97718;
+ font-family:Arial;
+ font-size:11px;
+ text-decoration:none;
+ font-weight:normal;
+}
+
+a.EditPreferences:hover
+{
+ color:#BA2204;
+ font-family:Arial;
+ font-size:11px;
+ text-decoration:none;
+ font-weight:normal;
+}
+.ProgressWriting
+{
+		font-family:Tahoma;
+		font-size:11px;
+		font-weight:normal;
+		color:#4D5963;
+}
+
+.SmallFont
+{
+	font-family:Arial;
+	font-size:6px;
+}
+
+.SmallFont
+{
+	font-family:Arial;
+	font-size:6px;
+}
+
+.WelcomeNoteSubTitleSmall
+{
+ font-family:Arial;
+ font-size:12px;
+ color:#E48529;
+ font-weight:bold;
+} 
+
+.BlueWriting
+{
+ font-family:Arial;
+ font-size:11px;
+ color:#2F669C;	
+ font-weight:bold;
+}
+
+.RedWriting
+	{
+	font-family:Tahoma;
+	 font-size:12px;
+	 color:red;
+    }
+    
+    .BlueMsgWriting
+{
+ font-family:Arial;
+ font-size:12px;
+ color:#2F669C;	
+ font-weight:bold;
+}
+
+.RedMsgWriting
+	{
+	font-family:Tahoma;
+	 font-size:12px;
+	 color:red;
+	  font-weight:bold;
+    }
+    
+    .Error404Title
+	{
+	 font-family:Arial;
+	 font-size:18px;
+	 color:#E48529;
+	 font-weight:bold;
+	}
+	
+	.Error404SubTitle
+	{
+	 font-family:Arial;
+	 font-size:16px;
+	 color:#E48529;
+	 font-weight:bold;
+	}
+	
+	 .FaqAnswersTitel
+	{
+		color:#0774CE;
+		font-family:Arial;
+	    font-size:13px;
+	    text-decoration:underline;
+	}
+	.PaymentTableCaption
+    {
+	border-top:#bab7b7 1px solid;
+	border-bottom:#bab7b7 1px solid;
+	border-right:#bab7b7 1px solid;
+	border-left:#bab7b7 1px solid;
+	background-color:#e0dfdf;
+	}
+	
+	.PaymentTableRow
+    {
+	border-top:#e1e1e1 1px solid;
+	border-bottom:#e1e1e1 1px solid;
+	border-right:#e1e1e1 1px solid;
+	border-left:#e1e1e1 1px solid;
+	background-color:#f6f6f6;
+	}
+	
+	.PaymentTotalRow
+    {
+	border-top:#bab7b7 1px solid;
+	border-bottom:#bab7b7 1px solid;
+	border-right:#bab7b7 1px solid;
+	border-left:#bab7b7 1px solid;
+	background-color:#fafaab;
+    }
+    
+	.BasicFontInBorder
+	{
+	font-family:MS Reference Sans Serif,Tahoma,Arial;
+	font-size:13px;
+	color:#222222;
+	text-align:left;
+	font-weight:normal;
+	border:solid 1px #000000;
+	background-color:#eef579;
+	}
+	
+	.YellowMarker
+	{
+	background-color:#eef579;
+	}

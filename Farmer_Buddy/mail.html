@@ -1,0 +1,497 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" import="java.sql.*" errorPage="" %>
+<%      
+	
+	session=request.getSession(false);
+    String username=(String)session.getAttribute("id");
+	if(username==null)
+	{
+	 response.sendRedirect("Login.jsp");
+	} 
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <TITLE>Farmers Buddy</TITLE>
+           <LINK href="./Sample_files/cssWeb.css" rel="StyleSheet" type="text/css">
+     <META name="revisit-after" content="3 days">
+    <META content="index, follow" name="robots">
+    <SCRIPT type="text/javascript">
+	     
+        function NavigateToHomePage(obj)
+        {
+            if(obj.selectedIndex > 0)//first entry is the plz choose
+            {
+                window.location.href = 'http://www.formlogix.com/' + obj.options[obj.selectedIndex].value;
+            }
+        }
+    </SCRIPT>
+ 
+    <!-- <BASE href="http://www.formlogix.com/"> --><BASE href=".">
+    
+<META name="description" content="FormLogix.com provides a great form templates gallery, browse our form gallery and easily clone it for your own needs. ">
+<META name="keywords" content="free web form,template,web form,form template,form gallery,contact us form,feedback form,invitation form">
+
+<SCRIPT type="text/javascript" src="./Sample_files/Common.js"></SCRIPT>
+<SCRIPT type="text/javascript">
+var NEW_LINE_TAG = '_formlogix_newline';
+var TEMPLATES_GALLERY_TEMPLATE_LOADING = 'Loading...';
+function DoSearch()
+{
+    ShowLoadingMsg(TEMPLATES_GALLERY_TEMPLATE_LOADING);
+    var searchTerm = document.getElementById('searchTerm').value;
+    CallServer('search' + '_formlogix_command'+searchTerm,'search');
+}
+
+// set the description of the template on the page
+function SetDescription(desc)
+{
+    // remove ' chars
+    var elem = document.getElementById('dvDescription');
+    elem.innerHTML = desc;
+    elem = null;
+}
+
+// show template html
+function ShowTemplateHTML(htmlData)
+{
+    var elem = document.getElementById('htmlContent');
+    elem.style.visibility = 'hidden';
+    elem.innerHTML = htmlData;
+    FixElements();
+    elem.style.visibility = 'visible';
+    elem = null;
+}
+
+// set list html
+function SetTemplateListHTML(listHTML)
+{
+    var elem = document.getElementById('dvTemplateList');
+    elem.innerHTML = listHTML;
+    elem = null;
+}
+function LoadTemplateHTML(id)
+{
+    ShowLoadingMsg(TEMPLATES_GALLERY_TEMPLATE_LOADING);
+    CallServer('id' + '_formlogix_command'+id,'showHTML');
+}
+
+function ShowCalendar(objId)
+{
+
+}
+
+
+function SetMousePointer()
+{
+
+}
+// fixes the labels for view: changes the enter constants to enters
+function FixLabelEnters()
+{
+ var dvHTML = document.getElementById('dvHTML');
+ var textAreas = document.body.getElementsByTagName('textarea');
+ var len = textAreas.length;
+
+    for(var i =0;i<len;i++)
+    {
+        var cuuElemInLoop = textAreas[i];
+        if (cuuElemInLoop!=null)
+        {
+            var type = cuuElemInLoop.getAttribute('ctlType');
+            if (type == 'Label')
+            {
+                var val = cuuElemInLoop.innerHTML; 
+                val = val.replace( new RegExp( NEW_LINE_TAG, "g" ), '\r\n' ); 
+//                while(val.indexOf(NEW_LINE_TAG) != -1)
+//                {                
+//                    val = val.replace(NEW_LINE_TAG,"\r\n");
+//                }  
+                cuuElemInLoop.innerHTML = val;
+                cuuElemInLoop.value = val;
+                cuuElemInLoop.setAttribute('value',val);                
+            }
+            
+        }
+    }
+}
+
+//recive server data and handled the apprpiate task
+function ReceiveServerData(rValue, context)
+{
+    HideLoadingMsg();
+    if (context == 'showHTML')
+    {
+        ShowTemplateHTML(rValue);
+    }
+    else if (context == 'search')
+    {
+        SetTemplateListHTML(rValue);
+    }
+
+    
+    return false;
+}
+
+
+///modifiaction html on runtime env.
+function FixElements()
+{
+   FixLabelEnters();
+   FixLabels();
+   FixMoveHelper();
+}
+
+// stub function for the template forms
+//valiudate form
+function ValidateForm()
+{
+    return false;
+}
+
+function CatchEnter() {
+}
+
+function insertRow(obj)
+{
+}
+function removeRow(obj)
+{
+}
+</SCRIPT>
+<SCRIPT type="text/javascript">
+function noenter() {
+  return !(window.event && window.event.keyCode == 13); }
+</SCRIPT>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 13px
+}
+-->
+</style>
+<style href>a {text-decoration: none} </style>
+</HEAD><BODY class="MainBGColor2" onload="startTime()">
+    <DIV>
+        <TABLE width="1034" cellpadding="0" cellspacing="0" class="MasterGeneralTable">
+      <TBODY><TR valign="top">
+                <TD width="1027">
+        <TD width="10" class="SideShadowRight">            </TR>
+            <!-- page start -->
+             <TR valign="top">
+              <TD align="center" class="MainTd"><table border="0" cellspacing="0" cellpadding="0" dir="ltr">
+                <!-- logo -->
+                <tbody>
+                  <tr class="LogoRow">
+                    <td colspan="3" align="left" class="LogoRow"><table cellspacing="0" cellpadding="0" width="933">
+                        <tbody>
+                          <tr>
+                            <td colspan="8" align="left"><img src="Sample_files/images/label3_01.gif" alt="logo1" width="933" height="120" /></td>
+                          </tr>
+                          <tr>
+                            <td width="281" align="left"><img src="Sample_files/images/label3_02.gif" alt="logo2" width="281" height="43" /></td>
+                            <td width="102" align="left"><a href="Sample.jsp"><img src="Sample_files/images/label3_03.gif" alt="home" width="102" height="43" border="0" /></a></td>
+                            <td width="108" align="left"><img src="Sample_files/images/label3_04.gif" alt="agrib" width="108" height="43" /></td>
+                            <td width="104" align="left"><img src="Sample_files/images/label3_05.gif" alt="majorcrops" width="104" height="43" /></td>
+                            <td width="107" align="left"><img src="Sample_files/images/label3_06.gif" alt="cropmarket" width="107" height="43" /></td>
+                            <td width="105" align="left"><a href="About Us.htm"><img src="Sample_files/images/label3_07.gif" alt="aboutus" width="105" height="43" border="0" /></a></td>
+                            <td width="126" align="left"><img src="Sample_files/images/label3_08.gif" alt="contactus" width="126" height="43" /></td>
+                            <td width="4" align="left">&nbsp;</td>
+                          </tr>
+                        </tbody>
+                    </table></td>
+                  </tr>
+                  <!-- menu -->
+                  <tr class="MenuRow">
+                    <td width="933" align="left" id="tdMainMenu1" ><iframe height="50" src ="http://www.nmce.com/top_test.jsp" width="933"></iframe></td>
+                  </tr>
+                  <tr>
+                    <td align="right" ><select class="GrayWriting" id="lstLang" name="lstLang" onchange="NavigateToHomePage(this);">
+                        <option value="--">Language</option>
+                        <option value="CreateWebForms.aspx?LangId=1">English</option>
+                        <option value="lang/esp/CreateWebForms.aspx?LangId=3">espa&ntilde;ol</option>
+                        <option value="lang/chn/CreateWebForms.aspx?LangId=4">中文</option>
+                        <option value="lang/fra/CreateWebForms.aspx?LangId=5">fran&ccedil;ais</option>
+                        <option value="lang/heb/CreateWebForms.aspx?LangId=2">עברית</option>
+                        <option value="lang/arb/CreateWebForms.aspx?LangId=6">العربية</option>
+                        <option value="lang/dut/CreateWebForms.aspx?LangId=7">Dutch</option>
+                        <option value="lang/rus/CreateWebForms.aspx?LangId=8">Русский</option>
+                    </select></td>
+                    
+                  </tr>
+                  <!-- gray line under menu -->
+                  <tr>
+                    <td colspan="3" class="MenuUnderline"></td>
+                  </tr>
+                  <!-- white space after menu -->
+                                    <!-- main content -->
+                  <tr bgcolor="WHITE">
+                    <td colspan="3" valign="top"><form name="aspnetForm" method="post" action="./Sample_files/Sample.htm" id="aspnetForm">
+                        <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+              </script>
+                        <script src="./Sample_files/WebResource.axd" type="text/javascript"></script>
+                        <script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context){ WebForm_DoCallback('__Page',arg,ReceiveServerData,context,null,false)} ;//]]>
+              </script>
+                        <script type="text/javascript">
+    
+    var isLoadingEffect = false;
+    var progressBlockCount = 8;
+    var currentBlock = 0;
+    var blockColor = '#c6d7ef';
+	function startTime()
+    {
+     var today=new Date();
+     var h=today.getHours();
+     var m=today.getMinutes();
+     var s=today.getSeconds();
+     // add a zero in front of numbers<10
+     m=checkTime(m);
+     s=checkTime(s);
+     document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+     t=setTimeout('startTime()',500);
+    }
+	
+	function changeBGC1(id)
+    {
+	 var a=id;
+     document.getElementById(a).style.backgroundColor ="#2f669c";
+	 document.getElementById(a).style.color ="white";
+	}
+	function changeBGC2(id)
+    {
+	 var a=id; 
+     document.getElementById(a).style.backgroundColor ="white";
+	 document.getElementById(a).style.color ="#2f669c";
+    }
+
+
+              </script>
+                        <table width="100&percnt;" cellpadding="0" cellspacing="0" border="0" dir="ltr">
+                          <tbody>
+                            <tr>
+                              <td><div style="width:933px">
+                                  <table class="BasicTable" cellspacing="0" border="0" >
+                                    <tbody>
+                                      
+                                      <tr>
+                                        <td colspan="2" class="WelcomeNoteSubTitle" align="left"><b>Farmers Buddy:Mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b></td>
+                                        <td colspan="2" align="right" class="WelcomeNoteSubTitle"><b>
+                                        
+                                        Welcome, <%=username%></b><a id="logout" href="signout.jsp"><img src="Sample_files/logout.png" alt="logout" /></a> </td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2" class="BasicFont" align="left"><img src="Sample_files/webdev-chat-128x128.png" alt="mail" width="107" height="91" /></td>
+                                        <td width="566" align="left"  class="BasicFont">&nbsp;</td>
+                                      <td width="155" align="right"  class="BasicFont"> Search: <br />
+                                            <input class="BasicFont" size="20px" type="text" id="searchTerm" name="searchTerm" onkeypress="return noenter()" />
+                                          &nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="4" height="15" align="left" class="SmallFont">&nbsp;</td>
+                                      </tr>
+                                      <tr valign="top">
+                                        <td width="203" height="370" valign="top"><table width="100&percnt;" cellpadding="0" cellspacing="0" border="0">
+                                            <tbody>
+                                              <tr valign="top">
+                                                <td align="left" class="GrayWriting"><div id="dvTemplateList" style="height:260px; width:162px; overflow:auto;border:1px; border-color:#BBBBBB; border-style:solid;">
+                                                    <table>
+                                                      <tbody>
+                                                        <tr>
+                                                          <td width="152" bordercolor="0" id="link1" class="BlueBasicFont" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);" ><a id="slink1" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">My  Profile</a></td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  <table width="160">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link2" onmouseover="SetDescription(&#39;&nbsp;Enter your location and get the soil details, the type of crops grown and fertilizers to be used&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink2" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Soil Analysis</a></td>
+                                                        </tr>
+                                                      </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link4" onmouseover="SetDescription(&#39;&nbsp;Post query either to the genral public or directed to an officer&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink3" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Online Query</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link5" onmouseover="SetDescription(&#39;&nbsp;Go for the Agricultural Officer help through trainings&#39;);changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink5" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"  href="myprofile.html" class="BlueBasicFont">Trainings</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link6" onmouseover="SetDescription(&#39;&nbsp;Post your problems,get responses and have disscussions&#39;);changeBGC1(this.id); " onmouseout="changeBGC2(this.id);" ><a id="slink6" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Forum</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link7" onmouseover="SetDescription(&#39;&nbsp;Use FB email services.#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink7" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Mail</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link9" onmouseover="SetDescription(&#39;&nbsp;order dog walks&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink9" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Poll</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="154" class="BlueBasicFontNoAlign" id="link10" onmouseover="SetDescription(&#39;&nbsp;Event report form&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink10" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Tools And Solutions</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link13" onmouseover="SetDescription(&#39;&nbsp;please fill out this short form and let us know if you will be coming&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink13" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="weather.jsp" class="BlueBasicFont">Weather Forecast</a></td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <table>
+                                                    <tbody>
+                                                      <tr>
+                                                          <td width="152" class="BlueBasicFontNoAlign" id="link14" onmouseover="SetDescription(&#39;&nbsp;Information request form&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"><a id="slink14" onmouseover="SetDescription(&#39;&nbsp;Edit and update your profile information&#39;); changeBGC1(this.id); " onmouseout="changeBGC2(this.id);"   href="myprofile.html" class="BlueBasicFont">Bulletin Board</a> </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  </div></td>
+                                              </tr>
+                                              <tr>
+                                                <td style="height:7px;" class="SmallFont" align="left">&nbsp;</td>
+                                              </tr>
+                                              <tr>
+                                                <td class="GrayWriting" align="left"><u><b>Description:</b></u></td>
+                                              </tr>
+                                              <tr>
+                                                <td style="height:7px;" class="SmallFont" align="left">&nbsp;</td>
+                                              </tr>
+                                              <tr>
+                                                <td align="left" class="GrayWriting"><div id="dvDescription" style="height:46px; width:158px; overflow:auto;border:1px; border-color:#BBBBBB; border-style:solid;">&nbsp;A form for choosing a christmas gift</div></td>
+                                              </tr>
+                                            </tbody>
+                                        </table></td>
+                                        <td width="1">&nbsp;</td>
+                                        <td colspan="2" align="left" valign="top">
+                                        <div id="div1">
+                      <form action="mailto.jsp" name="form1" id="form1" method="get">
+                                        <table>
+                                      
+                                      <tr><hr color="#FFFFFF" />
+                                      
+                                        <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Your Email Id </td>
+                                        <td width="256"><input type="text" name="senderemail" id="senderemail" /></td>
+                                      </tr>
+                                      <tr>
+                                      <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Password </td>
+                                      <td width="256"><input type="password" name="password" id="password" /></td>
+                                      </tr>
+                                      <tr>
+                                      <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Recipient Email Id</td>
+                                        <td width="256"><input type="text" name="recemail" id="recemail"/>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                      <td width="222">&nbsp;&nbsp;&nbsp;&nbsp;Subject </td>
+                                        <td width="256"><input type="text" name="subject" id="subject" /> </td>
+                                      </tr>
+									  <tr>
+                                      <td id="a" width="222" valign="">&nbsp;&nbsp;&nbsp;&nbsp;Message</td>
+                                      <td id="b" width="256"><textarea name="message" cols="30" rows="5"></textarea></td>
+                                      </tr>
+                                      <tr>
+                                      <td width="222">&nbsp;&nbsp;&nbsp;</td>
+                                      <td width="256" align="left"><input type="submit" name="send" id="send"/></td>
+                                      </tr>
+                                  </table></form></div></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div></td>
+                            </tr>
+                          </tbody>
+</table>
+                      <script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+              </script>
+                    </form></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"></td>
+                  </tr>
+                  <!-- gray line after footer -->
+                  <tr>
+                    <td colspan="3"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" valign="top" class="LearnMoreRow" align="left"></td>
+                  </tr>
+                  <!-- footer -->
+                  <tr>
+                    <td colspan="3" id="tdFooterLinks1"><table width="910" cellpadding="0" cellspacing="0" border="0" dir="ltr">
+                        <tbody>
+                          <tr>
+                            <td width="405" class="MenuFooterSite" align="left"><a class="FooterLinksSite" href="http://www.formlogix.com/Services.aspx" title="formlogix professional services">Services</a> | <a class="FooterLinksSite" href="http://www.formlogix.com/TermOfUse.aspx" title="terms of use">Term of use</a> | <a class="FooterLinksSite" href="http://www.formlogix.com/ReportAnAbuse.aspx" title="Report An Abuse">Abuse</a> | <a class="FooterLinksSite" href="http://www.formlogix.com/Partners.aspx" title="partners">Partners</a> | <a class="FooterLinksSite" href="http://www.formlogix.com/LinkBack.aspx" title="news">Link To Us</a> | <a class="FooterLinksSite" href="http://formlogix.blogspot.com/" target="_blank" title="formlogix Blog">Blog</a> | <a class="FooterLinksSite" href="http://www.formlogix.com/Advertise.aspx" target="_blank" title="formlogix Advertise">Advertise</a></td>
+                            <td width="505" class="MenuFooterSite" align="right">Copyright &copy; 2010-2050 FarmersBuddy.com All rights reserved</td>
+                          </tr>
+                        </tbody>
+                    </table></td>
+                  </tr>
+                  <!-- gray line after footer -->
+                  <tr>
+                    <td height="2" colspan="3" style="height:30px;"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="BottomShadow1"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="BottomShadow2"></td>
+                  </tr>
+                </tbody>
+              </table></TD>
+              <TD class="SideShadowRight">            </TR>
+        </TBODY></TABLE>
+</DIV>
+    
+
+   
+    
+<SCRIPT type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT><SCRIPT src="./Sample_files/ga.js" type="text/javascript"></SCRIPT>
+<SCRIPT type="text/javascript">
+var pageTracker = _gat._getTracker("UA-414530-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+            
+
+
+
+</BODY></HTML>
